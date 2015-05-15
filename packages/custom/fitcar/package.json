@@ -1,11 +1,11 @@
 {
-  "name": "articles",
+  "name": "fitcar",
   "version": "0.0.1",
-  "description": "Articles example package",
+  "description": "Some description of fitcar",
   "author": {
-    "name": "Linnovate"
+    "name": "mean scaffold"
   },
-  "mean": "0.4.x",
+  "mean": "0.4.7",
   "engines": {
     "node": "0.10.x",
     "npm": "1.4.x"
