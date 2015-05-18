@@ -18,7 +18,36 @@ SystemPackage.register(function(app, auth, database) {
   SystemPackage.routes(app, auth, database);
 
   SystemPackage.aggregateAsset('css', 'common.css');
-  SystemPackage.angularDependencies(['ui.router', 'mean-factory-interceptor']);
+
+    //Lib Aggregated files
+
+    var jsDir = '../lib/js/';
+    var cssDir = '../lib/css/';
+   // var imgDir = '../lib/css/';
+
+    console.log(cssDir);
+    //css
+    SystemPackage.aggregateAsset('css',cssDir + 'bootstrap.min.css');
+    SystemPackage.aggregateAsset('css',cssDir +'fancybox/jquery.fancybox.css');
+    SystemPackage.aggregateAsset('css',cssDir + 'flexslider.css');
+    SystemPackage.aggregateAsset('css',cssDir + 'style.css');
+    SystemPackage.aggregateAsset('css',cssDir +'skins/default.css');
+    //js
+    SystemPackage.aggregateAsset('js',jsDir + 'jquery.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'jquery.easing.1.3.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'bootstrap.min.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'jquery.fancybox.pack.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'jquery.fancybox-media.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'google-code-prettify/prettify.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'portfolio/jquery.quicksand.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'portfolio/setting.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'jquery.flexslider.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'animate.js');
+    SystemPackage.aggregateAsset('js',jsDir + 'custom.js');
+
+
+
+    SystemPackage.angularDependencies(['ui.router', 'mean-factory-interceptor']);
 
   // The middleware in config/express will run before this code
 
